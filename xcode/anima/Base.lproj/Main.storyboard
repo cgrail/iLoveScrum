@@ -135,7 +135,7 @@
                                     <navigationItem title="Title" id="6Pf-5m-8rg"/>
                                 </items>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="44.5"/>
                                 </variation>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-ja-Ch2">
