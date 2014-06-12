@@ -2,7 +2,7 @@
 //  File.swift
 //  anima
 //
-//  Created by Daniel Fliegauf on 12/06/14.
+//  Created by Daniel Fliegauf,Christian and Chatss on 12/06/14.
 //  Copyright (c) 2014 Daniel Fliegauf. All rights reserved.
 //
 
