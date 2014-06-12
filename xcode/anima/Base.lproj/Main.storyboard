@@ -9,12 +9,13 @@
             <objects>
                 <tableViewController id="lXp-Wv-arr" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y8K-bk-MSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="24" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="EO0-1I-vgx">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="EO0-1I-vgx">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EO0-1I-vgx" id="IOZ-aZ-jSy">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -35,15 +36,16 @@
             </objects>
             <point key="canvasLocation" x="-433" y="192.75"/>
         </scene>
-        <!--Master View Controller-->
+        <!--File-->
         <scene sceneID="Mq6-dV-2R1">
             <objects>
-                <viewController id="Egh-c5-IjS" customClass="MasterViewController" sceneMemberID="viewController">
+                <viewController id="Egh-c5-IjS" customClass="File" customModule="anima" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p0e-h8-d7m"/>
                         <viewControllerLayoutGuide type="bottom" id="omR-he-U0D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yoF-Jz-IYB">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-fn-Tde">
@@ -64,7 +66,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="193" width="238" height="21"/>
+                                    <rect key="frame" x="20" y="193" width="238" height="20.5"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -124,7 +126,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-GY-Y81">
                                 <rect key="frame" x="0.0" y="-74" width="88" height="74"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="196" y="263" width="88" height="74"/>
+                                    <rect key="frame" x="101" y="150" width="88" height="74"/>
                                 </variation>
                             </imageView>
                             <navigationBar contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iev-zJ-4Wx">
@@ -136,6 +138,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
                                 </variation>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-ja-Ch2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="222" width="218" height="145"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -143,17 +154,20 @@
                             <mask key="subviews">
                                 <exclude reference="FCD-GY-Y81"/>
                                 <exclude reference="Iev-zJ-4Wx"/>
+                                <exclude reference="MGg-ja-Ch2"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="FCD-GY-Y81"/>
                                 <include reference="Iev-zJ-4Wx"/>
+                                <include reference="MGg-ja-Ch2"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="HGh-54-cL1"/>
                     <connections>
+                        <outlet property="backlogTextLabel" destination="MGg-ja-Ch2" id="CBe-bO-3BU"/>
                         <outlet property="heart" destination="FCD-GY-Y81" id="pKY-tA-vTb"/>
                     </connections>
                 </viewController>

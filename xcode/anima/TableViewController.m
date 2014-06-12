@@ -7,12 +7,13 @@
 //
 
 #import "TableViewController.h"
+#import "ViewController.h"
 
 @interface TableViewController ()
 
-@property (nonatomic, retain) NSArray *titleObjectsArray;
-@property (nonatomic, retain) NSArray *subtitleObjectsArray;
-@property (weak, nonatomic) id delegate;
+@property (nonatomic, retain) NSArray *project0Array;
+@property (nonatomic, retain) NSArray *allProjectsArray;
+
 
 @end
 
@@ -37,8 +38,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.titleObjectsArray = @[@"BacklogItem 1", @"BacklogItem 2", @"BacklogItem 3", @"BacklogItem 4"];
-    self.subtitleObjectsArray = @[@"High", @"Medium", @"Low"];
+    self.project0Array = @[@[@"BacklogItem 1", @"Backlog1 Text"], @[@"BacklogItem 2", @"Backlog2 Text"], @[@"BacklogItem 3", @"Backlog3 Text"], @[@"BacklogItem 4", @"Backlo4 Text"]];
+    self.allProjectsArray = @[@"Project0", @"Project1", @"Project2"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,19 +53,19 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.subtitleObjectsArray count];
+    return [self.allProjectsArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.titleObjectsArray count];
+    return [self.project0Array count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 //    for (int i=0; i<[self.subtitleObjectsArray count]; i++) {
-        return [self.subtitleObjectsArray objectAtIndex:section];
+        return [self.allProjectsArray objectAtIndex:section];
     
 }
 
@@ -74,7 +75,26 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
  
     // Configure the cell...
-    cell.textLabel.text = [self.titleObjectsArray objectAtIndex:indexPath.row];
+    
+    // return appropriate cell(s) based on section
+    if(indexPath.section == 0) //Project 0
+    {
+        // Return 1 cell
+        cell.textLabel.text = [[self.project0Array objectAtIndex:indexPath.row] objectAtIndex:0];
+    }
+    else if(indexPath.section == 1) //Project 1
+    {
+        cell.textLabel.text = [[self.project0Array objectAtIndex:indexPath.section] objectAtIndex:0];
+    }
+    else if(indexPath.section == 2) //Project 2
+    {
+        cell.textLabel.text = [[self.project0Array objectAtIndex:indexPath.section] objectAtIndex:0];
+    }
+    else
+    {
+        cell.textLabel.text = [[self.project0Array objectAtIndex:indexPath.section] objectAtIndex:0];
+    }
+   
 
     return cell;
 }
@@ -133,9 +153,11 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"Detail"]) {
+        
 
     __weak id weakSelf = self;
     [[segue destinationViewController] setDelegate:weakSelf];
+    [[segue destinationViewController] setBacklogText:[NSString stringWithFormat:@"asdasfhasjf   %@", [[[sender project0Array] objectAtIndex:1] objectAtIndex:1]]];
     }
 }
 

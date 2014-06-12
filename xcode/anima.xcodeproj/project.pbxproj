@@ -15,6 +15,7 @@
 		65210F0A19428DE700D3AF86 /* animaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65210F0919428DE700D3AF86 /* animaTests.m */; };
 		65210F1519477B4100D3AF86 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65210F1419477B4100D3AF86 /* TableViewController.m */; };
 		65210F181947B50700D3AF86 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65210F171947B50700D3AF86 /* MasterViewController.m */; };
+		65210F4A194A38D700D3AF86 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65210F49194A38D700D3AF86 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		65210F1419477B4100D3AF86 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		65210F161947B50700D3AF86 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		65210F171947B50700D3AF86 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		65210F48194A38D600D3AF86 /* anima-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "anima-Bridging-Header.h"; sourceTree = "<group>"; };
+		65210F49194A38D700D3AF86 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +93,14 @@
 				65210EF719428DE600D3AF86 /* ViewController.h */,
 				65210F161947B50700D3AF86 /* MasterViewController.h */,
 				65210F171947B50700D3AF86 /* MasterViewController.m */,
+				65210F49194A38D700D3AF86 /* File.swift */,
 				65210EF819428DE600D3AF86 /* ViewController.m */,
 				65210EFA19428DE600D3AF86 /* Main.storyboard */,
 				65210F1319477B4100D3AF86 /* TableViewController.h */,
 				65210F1419477B4100D3AF86 /* TableViewController.m */,
 				65210EFD19428DE600D3AF86 /* Images.xcassets */,
 				65210EF019428DE600D3AF86 /* Supporting Files */,
+				65210F48194A38D600D3AF86 /* anima-Bridging-Header.h */,
 			);
 			path = anima;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65210EF919428DE600D3AF86 /* ViewController.m in Sources */,
+				65210F4A194A38D700D3AF86 /* File.swift in Sources */,
 				65210EF619428DE600D3AF86 /* AppDelegate.m in Sources */,
 				65210F181947B50700D3AF86 /* MasterViewController.m in Sources */,
 				65210EF319428DE600D3AF86 /* main.m in Sources */,
@@ -344,10 +350,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = anima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "anima/anima-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -357,10 +366,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = anima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "anima/anima-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -420,6 +431,7 @@
 				65210F0F19428DE700D3AF86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65210F1019428DE700D3AF86 /* Build configuration list for PBXNativeTarget "animaTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +440,7 @@
 				65210F1219428DE700D3AF86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

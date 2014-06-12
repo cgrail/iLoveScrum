@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController <UINavigationControllerDelegate>
 
 @property (weak, nonatomic) id <UINavigationBarDelegate> delegate;
+@property (weak, nonatomic) NSString *backlogText;
+@property (weak, nonatomic) IBOutlet UILabel *backlogTextLabel;
 
 @end
 

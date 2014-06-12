@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-
+@property (weak, nonatomic) id delegate;
 @end

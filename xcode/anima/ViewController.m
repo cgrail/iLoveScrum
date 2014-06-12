@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *heart;
+
 -(void)animateHeart:(NSTimer*) t ;
 
 @end
@@ -18,6 +19,8 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.backlogTextLabel.text = self.backlogText;
     // Do any additional setup after loading the view, typically from a nib.
     //UIButton *results = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 100, 100)];
     //[results addTarget:self action:@selector(validateUserInputs) forControlEvents:UIControlEventTouchDragInside];
